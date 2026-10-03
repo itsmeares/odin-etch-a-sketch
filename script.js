@@ -8,14 +8,14 @@ for (let i = 0; i < 16; i++) {
     }
 }
 
-/* Should add to single not all of the children
+const squares = document.querySelectorAll(".grid__square");
 
-gridContainer.addEventListener("mouseenter", (e) => {
-    e.target.classList.add("hover");
-})
+squares.forEach(item => {
+    item.addEventListener("mouseenter", () => {
+        item.classList.add("hover");
+    });
 
-gridContainer.addEventListener("mouseleave", (e) => {
-    e.target.classList.remove("hover");
-})
-
-*/
+    item.addEventListener("mouseleave", () => {
+        item.classList.remove("hover");
+    });
+});
