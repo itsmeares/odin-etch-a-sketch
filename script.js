@@ -20,7 +20,11 @@ function hover() {
 
     squares.forEach(item => {
         item.addEventListener("mouseenter", () => {
-            item.classList.add("hover");
+            const r = Math.floor(Math.random() * 256);
+            const g = Math.floor(Math.random() * 256);
+            const b = Math.floor(Math.random() * 256);
+
+            item.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
         });
     });
 }
