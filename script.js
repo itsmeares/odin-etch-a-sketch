@@ -25,6 +25,14 @@ function hover() {
             const b = Math.floor(Math.random() * 256);
 
             item.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
+ 
+            const opacity = parseFloat(item.style.opacity);
+            
+            if (opacity > 0) {
+                item.style.opacity = opacity - 0.1;
+            } else {
+                item.style.opacity = 1;
+            }
         });
     });
 }
