@@ -1,28 +1,53 @@
-body {
-    background: hsl(0, 0%, 20%);
+* {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
+}
+
+body {
+    background: hsl(0, 0%, 2%);
+    color: white;
+    display: flex;
+    flex-direction: column;
 }
 
 .grid__button {
     display: block;
-    margin: 0 auto;
+    margin: 10px auto 10px;
+    padding: 4px 8px;
+    border: none;
 }
 
 .grid__container {
-    padding-top: 10px;
+    padding: 10px;
     margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     height: 90vh;
     width: 90vw;
+    border: 4px solid hsl(0, 10%, 30%);
+    border-radius: 8px;
 }
 
-.grid__square {
-    border: 1px solid hsl(0, 100%, 50%);
-    /* min-width: 0; */
-    /* min-height: 0; */
-    flex: 0 0 12%;
+.grid__row {
+    border: 1px solid hsl(0, 0%, 80%);
+    display: flex;
+    flex-direction: row;
+    flex: 1 1 auto;
 }
+
+.grid__column {
+    border: 1px solid hsl(0, 0%, 80%);
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 auto;
+}
+
+/* .grid__container > div {
+    height: auto;
+    flex: 1 0 auto;
+} */
 
 .hover {
     background-color: hsl(0, 0%, 90%);
